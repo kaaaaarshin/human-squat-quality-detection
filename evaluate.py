@@ -5,8 +5,8 @@ from heuristics import evaluate_heuristics, load_kinematics_bounds, get_severity
 
 def score_sequence_via_ml(seq_features, model_path="v8_lstm.pth"):
     try:
-        mean = np.load("feature_mean.npy")
-        std = np.load("feature_std.npy")
+        mean = np.load("stats/feature_mean.npy")
+        std = np.load("stats/feature_std.npy")
         from models import AttentionLSTMPredictor
         model = AttentionLSTMPredictor(input_dim=21, hidden_dim=64, num_layers=2)
         model.load_state_dict(torch.load(model_path))
