@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 from heuristics import evaluate_heuristics, load_kinematics_bounds, get_severity
 
-def score_sequence_via_ml(seq_features, model_path="v8_lstm.pth"):
+def score_sequence_via_ml(seq_features, model_path="models/v8_lstm.pth"):
     try:
         mean = np.load("stats/feature_mean.npy")
         std = np.load("stats/feature_std.npy")
