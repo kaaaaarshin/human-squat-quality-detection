@@ -3,7 +3,7 @@ import numpy as np
 def load_kinematics_bounds():
     try:
         import json
-        with open("fit3d_kinematics.json", "r") as f:
+        with open("stats/fit3d_kinematics.json", "r") as f:
             return json.load(f)
     except:
         return {
